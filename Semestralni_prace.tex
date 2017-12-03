@@ -1,0 +1,102 @@
+%----------------------------------------------------------------------------------------
+%	Konfigurace dokumentu
+%----------------------------------------------------------------------------------------
+
+\documentclass[paper=a4, fontsize=11pt]{scrartcl} 
+\usepackage[T1]{fontenc} 
+\usepackage{fourier} 
+\usepackage[utf8]{inputenc}
+\usepackage[czech, english]{babel}
+\usepackage{amsmath,amsfonts,amsthm} 
+\usepackage{lipsum}
+\usepackage{sectsty} 
+\allsectionsfont{\centering \normalfont\scshape}
+\usepackage{fancyhdr} 
+\pagestyle{fancyplain} 
+\fancyhead{} 
+\fancyfoot[L]{}
+\fancyfoot[C]{} 
+\fancyfoot[R]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\headheight}{13.6pt} 
+\numberwithin{equation}{section}
+\numberwithin{figure}{section} 
+\numberwithin{table}{section}
+\setlength\parindent{0pt} 
+\usepackage[ddmmyyyy]{datetime}
+\newdate{date}{26}{09}{2017}
+\date{\displaydate{date}}
+
+\addto\captionsenglish{% Replace "english" with the language you use
+\renewcommand{\contentsname}%
+  {Obsah}%
+}
+
+%----------------------------------------------------------------------------------------
+%	Titulek
+%----------------------------------------------------------------------------------------
+
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}} 
+\title{	
+\normalfont \normalsize 
+\textsc{Mendelova univerzita v Brně\\Provozně ekonomická fakulta} \\ [25pt] 
+\horrule{0.5pt} \\[0.4cm] 
+\huge Technologie Wi-Fi HaLow (založena na standardu IEEE 802.11ah) \\ % Název semestrální práce
+\horrule{2pt} \\[0.5cm] 
+}
+
+\author{Jan Šilhan} % Vaše jméno
+
+\date{\displaydate{date}} 
+
+\begin{document}
+
+\maketitle 
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+%----------------------------------------------------------------------------------------
+%	Úvod
+%----------------------------------------------------------------------------------------
+
+\section{Úvod}
+
+V této práci se budu zabývat Wi-Fi a přenosem dat pro IoT \footnote{Internet of Things}, 
+konkrétně Wi-Fi IEEE 802.11ah (HaLow).
+Přenos dat v IoT je nedílnou součástí, ale otázka energetické náročnosti přenosu dat s ní.
+Dále také přenos na větší vzdálenosti. 
+Doposud zde je mainstreamovým medii pro přenos bluetooth a Wi-Fi. 
+Bluetooth je energeticky nenáročný ovšem dosah není tak uspokojivý, 
+Wi-Fi na druhé straně muže přenášet velké množství dat na relativně velké vzdálenosti, 
+ale s tím spojená cena energetické náročnosti. 
+Dnes je však tento problém z velké části vyřešen, s příchodem IEEE 802.11ah. 
+
+\section{Historie}
+Wi-Fi a standard IEEE 802.11 je poprvé navrhnut a publikován v roce 1997. 
+Rychlost tohoto standartu mohla dosahovat až 2 Mb/s na vzdálenost circa 20 metrů uvnitř budovy, 
+venku až 100 metrů.
+V tomto standartu byla také nadefinovaná přenosová frekvence 2.4 GHz která se používá do dnes.
+	\subsection{IEEE 802.11a}
+	V roce 1999 byli představeny dvě revize standartu. Jedna z nich je 
+	IEEE 802.11a který začal používat novou přenosovou frekvenci 5 GHz a 3.7 GHz. 
+	Zvýšení frekvence přineslo větší datovou prostupnost, 
+	ale v budovách přichází problém s prostupností zdí. 
+
+	\subsection{IEEE 802.11b/g/n}
+	Dodnes používané protokoly b/g/n, 
+	jsou nejčastěji viděny v domácnostech, 
+	některé starší zařízení do dnes využívá protokol b z roku 1999. 
+	Avšak většina vysílačů dovoluje použít všechny výše zmíněné protokoly. 
+	Při ideálních podmínkách je přenosová rychlost až 600 Mb/s.
+
+	\subsection{IEEE 802.11ac}
+	V roce 2013 byl představen nový standart IEEE 802.11ac
+	 který je teoreticky schopný přenosové rychlosti až 3466.8 Mb/s. 
+	 Dnes je hojně využívaný pro bezdrátový internet, to ovšem způsobuje rušení a degradaci signálu,
+	 Brno je toho velkým příkladem.
+\end{document}
